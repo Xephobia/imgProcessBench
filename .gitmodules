@@ -1,0 +1,3 @@
+[submodule "deps/photon"]
+	path = deps/photon
+	url = https://github.com/silvia-odwyer/photon.git

@@ -1,4 +1,4 @@
-name: Java CI
+name: benchmark
 
 on:
   push:
@@ -14,10 +14,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name : install hyperfine
-      uses : curl –O https://github.com/sharkdp/hyperfine/releases/download/v1.10.0/hyperfine_1.10.0_amd64.deb ; sudo dpkg -i hyperfine_1.10.0_amd64.deb
-    - name : clone photon
-      run : git clone https://github.com/silvia-odwyer/photon.git
-
-    - name: bechmark photon
-      run : cd photon/crate ; hyperfine cargo bench
+    - name : install deps
+      run : .\deps.sh
