@@ -9,12 +9,12 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
     - uses: actions/checkout@v2
     
     - name : install deps
-      run : chmod +x * ; ./deps.
+      run : chmod +x * ; ./deps
     - name : benchmark
       run : ./bench.sh
