@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     
     - name : allow permission
-      run : chmod x+ deps.sh bench.sh
+      run : chmod u+r+x deps.sh bench.sh
     - name : install deps
       run : ./deps.sh
     - name : benchmark
